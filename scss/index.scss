@@ -1,8 +1,8 @@
 @import 'colors';
 
-@mixin underline($color) {
-  width: 60%;
-  height: 10px;
+@mixin underline($height, $color, $width) {
+  width: $width;
+  height: $height;
   background-color: $color;
   margin: auto;
 }
@@ -10,21 +10,20 @@
 .page {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .page__header {
-  width: 60%;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: auto;
   background-color: $header-background;
 }
 
 .page__header-underlined {
-  @include underline($header-underline);
+  @include underline(10px, $header-underline, 100%);
 }
 
 .page__header__title {
@@ -53,4 +52,20 @@
 
 .options {
   margin: auto;
+  margin-top: 30px;
+}
+
+.options__button {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: underline;
+  background: $article-background;
+  align-items: flex-end;
+/*  &:hover {
+    @include underline(2px, $article-underline, auto);
+  }*/
+}
+
+.options__popular-underlined {
+  @include underline(5px, $article-underline, auto);
 }
