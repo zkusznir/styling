@@ -1,0 +1,56 @@
+@import 'colors';
+
+@mixin underline($color) {
+  width: 60%;
+  height: 10px;
+  background-color: $color;
+  margin: auto;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.page__header {
+  width: 60%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  background-color: $header-background;
+}
+
+.page__header-underlined {
+  @include underline($header-underline);
+}
+
+.page__header__title {
+  flex-grow: 10;
+  padding-left: 3%;
+  font: bold 200% sans-serif;
+}
+
+.page__header__login-form {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+}
+
+.page__header__login-form__inputs {
+  input { 
+    display: block;
+    margin: 5px;
+  }
+}
+
+.page__header__login-form__submit {
+  display: inline-block;
+  margin: 5px;
+}
+
+.options {
+  margin: auto;
+}
