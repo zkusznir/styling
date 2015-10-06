@@ -5,7 +5,15 @@
   height: $height;
   background-color: $color;
   margin: auto;
-  vertical-align: bottom;
+}
+
+@mixin container($height, $width, $color) {
+  height: $height;
+  width: $width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color;
 }
 
 .page {
@@ -13,24 +21,21 @@
   flex-direction: column;
   max-width: 1000px;
   margin: auto;
+  font-family: sans-serif;
 }
 
 .page-header {
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $header-background;
+  @include container(100px, auto, $header-background);
 }
 
-.page-header--underlined {
+.page-header-underline {
   @include underline(10px, $header-underline, 100%);
 }
 
 .page-header__title {
   flex-grow: 10;
   padding-left: 3%;
-  font: bold 200% sans-serif;
+  font: bold 32px sans-serif;
 }
 
 .page-header__login-form {
@@ -64,7 +69,6 @@
   text-decoration: underline;
   font-size: 16px;
   background: $article-background;
-  align-items: flex-end;
   &:hover + .button__underline {
     @include underline(3px, $article-underline, auto);
   }
@@ -72,4 +76,51 @@
 
 .button__underline {
   @include underline(3px, $article-background, auto);
+}
+
+.story {
+  @include container(auto, auto, $article-background);
+  padding: 10px;
+  margin-top: 30px;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.counter {
+  @include container(40px, 40px, $header-background);
+  flex-direction: column;
+  min-width: 40px;
+  justify-content: flex-end;
+}
+
+.counter__value {
+  margin: auto;
+}
+
+.counter__underline {
+  @include underline(5px, $header-underline, 100%);
+  margin: 0px;
+}
+
+.arrows {
+  @include container(40px, 40px, $article-background);
+  flex-direction: column;
+  min-width: 40px;
+  .gray-arrow {
+    color: $light-gray;
+  }
+}
+
+.info {
+  .info__title {
+    font: bold 20px sans-serif;
+  }
+  .info__url {
+    font-size: 15px;
+    text-decoration: underline;
+  }
+}
+
+.story-underline {
+  @include underline(5px, $article-underline, 100%);
 }
