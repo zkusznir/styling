@@ -14,7 +14,7 @@
   margin: auto;
 }
 
-.page__header {
+.page-header {
   height: 100px;
   display: flex;
   align-items: center;
@@ -22,30 +22,30 @@
   background-color: $header-background;
 }
 
-.page__header-underlined {
+.page-header--underlined {
   @include underline(10px, $header-underline, 100%);
 }
 
-.page__header__title {
+.page-header__title {
   flex-grow: 10;
   padding-left: 3%;
   font: bold 200% sans-serif;
 }
 
-.page__header__login-form {
+.page-header__login-form {
   display: flex;
   flex-grow: 1;
   align-items: flex-end;
 }
 
-.page__header__login-form__inputs {
+.login-form__inputs {
   input { 
     display: block;
     margin: 5px;
   }
 }
 
-.page__header__login-form__submit {
+.login-form__submit {
   display: inline-block;
   margin: 5px;
 }
@@ -66,6 +66,6 @@
   }*/
 }
 
-.options__popular-underlined {
-  @include underline(5px, $article-underline, auto);
+.options__button--underlined {
+  @include underline(3px, $article-underline, auto);
 }
