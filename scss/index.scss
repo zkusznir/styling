@@ -16,6 +16,17 @@
   background-color: $color;
 }
 
+@mixin colorful_button($background, $underline) {
+  display: inline-block;
+  padding: 10px;
+  text-decoration: underline;
+  font-size: 16px;
+  background: $background;
+  &:hover + .button__underline {
+    @include underline(3px, $underline, auto);
+  }
+}
+
 .page {
   display: flex;
   flex-direction: column;
@@ -63,15 +74,8 @@
   font-size: 0px;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px;
-  text-decoration: underline;
-  font-size: 16px;
-  background: $article-background;
-  &:hover + .button__underline {
-    @include underline(3px, $article-underline, auto);
-  }
+.button__text {
+  @include colorful_button($article-background, $article-underline);
 }
 
 .button__underline {
@@ -98,7 +102,7 @@
 }
 
 .counter__underline {
-  @include underline(5px, $header-underline, 100%);
+  @include underline(3px, $header-underline, 100%);
   margin: 0px;
 }
 
@@ -123,4 +127,24 @@
 
 .story-underline {
   @include underline(5px, $article-underline, 100%);
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.footer__options {
+  display: flex;
+  font-size: 0px;
+
+  .button__text {
+    @include colorful_button($header-background, $header-underline);
+  }
+
+  .button__underline {
+    @include underline(3px, $header-background, auto);
+  }
 }
