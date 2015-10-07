@@ -3,8 +3,15 @@
   <head>
     <title>Stylish app</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script>
+      function overlay() {
+        el = document.getElementsByClassName("overlay")[0];
+        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+      }
+  </script>
   </head>
   <body>
+    <a href='#' onclick='overlay()'>Click here to show the overlay</a>
     <div class='page'>
       <div class='page-header'>
         <div class='page-header__title'>Fresh News</div>
@@ -66,6 +73,13 @@
           <div class='button--green'>Contact</div>
         </div>
       </div>
+    </div>
+
+    <div class="overlay">
+     <div>
+        <p>Content you want the user to see goes here.</p>
+        Click here to [<a href='#' onclick='overlay()'>close</a>]
+     </div>
     </div>
   </body>
 </html>
