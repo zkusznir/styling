@@ -11,8 +11,6 @@
   height: $height;
   width: $width;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: $color;
 }
 
@@ -22,8 +20,9 @@
   text-decoration: underline;
   font-size: 16px;
   background: $background;
-  &:hover + .button__underline {
-    @include underline(3px, $underline, auto);
+  border-bottom: solid 3px $background;
+  &:hover {
+    border-bottom: solid 3px $underline;
   }
 }
 
@@ -37,10 +36,9 @@
 
 .page-header {
   @include container(100px, auto, $header-background);
-}
-
-.page-header-underline {
-  @include underline(10px, $header-underline, 100%);
+  align-items: center;
+  justify-content: center;
+  border-bottom: solid 10px $header-underline;
 }
 
 .page-header__title {
@@ -67,47 +65,40 @@
   margin: 5px;
 }
 
-.options {
+.options-buttons {
   display: flex;
   margin: auto;
   margin-top: 30px;
-  font-size: 0px;
 }
 
-.button__text {
+.button--gray {
   @include colorful_button($article-background, $article-underline);
 }
 
-.button__underline {
-  @include underline(3px, $article-background, auto);
+.button--green {
+  @include colorful_button($header-background, $header-underline);
 }
 
 .story {
   @include container(auto, auto, $article-background);
   padding: 10px;
   margin-top: 30px;
-  justify-content: flex-start;
-  align-items: flex-start;
+  border-bottom: solid 5px $article-underline;
 }
 
 .counter {
   @include container(40px, 40px, $header-background);
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   min-width: 40px;
-  justify-content: flex-end;
-}
-
-.counter__value {
-  margin: auto;
-}
-
-.counter__underline {
-  @include underline(3px, $header-underline, 100%);
-  margin: 0px;
+  border-bottom: solid 3px $header-underline;
 }
 
 .arrows {
   @include container(40px, 40px, $article-background);
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   min-width: 40px;
   .gray-arrow {
@@ -115,18 +106,13 @@
   }
 }
 
-.info {
-  .info__title {
-    font: bold 20px sans-serif;
-  }
-  .info__url {
-    font-size: 15px;
-    text-decoration: underline;
-  }
+.info__title {
+  font: bold 20px sans-serif;
 }
 
-.story-underline {
-  @include underline(5px, $article-underline, 100%);
+.info__url {
+  font-size: 15px;
+  text-decoration: underline;
 }
 
 .footer {
@@ -136,15 +122,7 @@
   margin-top: 30px;
 }
 
-.footer__options {
+.footer__button-links {
   display: flex;
   font-size: 0px;
-
-  .button__text {
-    @include colorful_button($header-background, $header-underline);
-  }
-
-  .button__underline {
-    @include underline(3px, $header-background, auto);
-  }
 }

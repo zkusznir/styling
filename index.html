@@ -1,100 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Stylish app</title>
-<link rel="stylesheet" type="text/css" href="css/index.css">
-</head>
-<body>
-  <div class='page'>
-    <div class='page-header'>
-      <div class='page-header__title'>Fresh News</div>
-      <div class='page-header__login-form'>
-        <div class='login-form__inputs'>
-          <input type='text' placeholder='Email'>
-          <input type='text' placeholder='Password'>
+  <head>
+    <title>Stylish app</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+  </head>
+  <body>
+    <div class='page'>
+      <div class='page-header'>
+        <div class='page-header__title'>Fresh News</div>
+        <div class='page-header__login-form'>
+          <div class='login-form__inputs'>
+            <input type='text' placeholder='Email'>
+            <input type='text' placeholder='Password'>
+          </div>
+          <div class='login-form__submit'>
+            <button type='button'>Sign in</button>
+          </div>
         </div>
-        <div class='login-form__submit'>
-          <button type='button'>Sign in</button>
+      </div>
+      <div class='options-buttons'>
+        <div class='button--gray'>Popular</div>
+        <div class='button--gray'>Recent</div>
+        <div class='button--gray'>Submit a story</div>
+      </div>
+      <div class='story'>
+        <div class='counter'>12</div>
+        <div class='arrows'>
+          <div>&#x25B2</div>
+          <div>&#x25BC</div>
+        </div>
+        <div class='info'>
+          <div class='info__title'>Scala.js no longer experimental</div>
+          <div class='info__url'>scala-lang.org</div>
         </div>
       </div>
-    </div>
-    <div class='page-header-underline'></div>
-    <div class='options'>
-      <div class='button'>
-        <div class='button__text'>Popular</div>
-        <div class='button__underline'></div>
-      </div>
-      <div class='button'>
-        <div class='button__text'>Recent</div>
-        <div class='button__underline'></div>
-      </div>
-      <div class='button'>
-        <div class='button__text'>Submit a story</div>
-        <div class='button__underline'></div>
-      </div>
-    </div>
-    <div class='story'>
-      <div class='counter'>
-        <div class='counter__value'>12</div>
-        <div class='counter__underline'></div>
-      </div>
-      <div class='arrows'>
-        <div>&#x25B2</div>
-        <div>&#x25BC</div>
-      </div>
-      <div class='info'>
-        <div class='info__title'>Scala.js no longer experimental</div>
-        <div class='info__url'>scala-lang.org</div>
-      </div>
-    </div>
-    <div class='story-underline'></div>
-    <div class='story'>
-      <div class='counter'>
-        <div class='counter__value'>8</div>
-        <div class='counter__underline'></div>
-      </div>
-      <div class='arrows'>
-        <div>&#x25B2</div>
-        <div class='gray-arrow'>&#x25BC</div>
-      </div>
-      <div class='info'>
-        <div class='info__title'>A new paper claims that evolution has stopped in a bacterial species. Is it true?</div>
-        <div class='info__url'>whyevolutionistrue.wordpress.com</div>
-      </div>
-    </div>
-    <div class='story-underline'></div>
-    <div class='story'>
-      <div class='counter'>
-        <div class='counter__value'>6</div>
-        <div class='counter__underline'></div>
-      </div>
-      <div class='arrows'>
-        <div>&#x25B2</div>
-        <div class='gray-arrow'>&#x25BC</div>
-      </div>
-      <div class='info'>
-        <div class='info__title'>You're missing the Point of Server-Side Rendered JavaScript Apps</div>
-        <div class='info__url'>tomdale.net</div>
-      </div>
-    </div>
-    <div class='story-underline'></div>
-    <div class='footer'>
-      <input class='footer__search' type='text' placeholder='Search'>
-      <div class='footer__options'>
-        <div class='button'>
-          <div class='button__text'>About</div>
-          <div class='button__underline'></div>
+      <div class='story'>
+        <div class='counter'>8</div>
+        <div class='arrows'>
+          <div>&#x25B2</div>
+          <div class='gray-arrow'>&#x25BC</div>
         </div>
-        <div class='button'>
-          <div class='button__text'>FAQ</div>
-          <div class='button__underline'></div>
+        <div class='info'>
+          <div class='info__title'>A new paper claims that evolution has stopped in a bacterial species. Is it true?</div>
+          <div class='info__url'>whyevolutionistrue.wordpress.com</div>
         </div>
-        <div class='button'>
-          <div class='button__text'>Contact</div>
-          <div class='button__underline'></div>
+      </div>
+      <div class='story-underline'></div>
+      <div class='story'>
+        <div class='counter'>6</div>
+        <div class='arrows'>
+          <div>&#x25B2</div>
+          <div class='gray-arrow'>&#x25BC</div>
+        </div>
+        <div class='info'>
+          <div class='info__title'>You're missing the Point of Server-Side Rendered JavaScript Apps</div>
+          <div class='info__url'>tomdale.net</div>
+        </div>
+      </div>
+      <div class='story-underline'></div>
+      <div class='footer'>
+        <input class='footer__search' type='text' placeholder='Search'>
+        <div class='footer__button-links'>
+          <div class='button--green'>About</div>
+          <div class='button--green'>FAQ</div>
+          <div class='button--green'>Contact</div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>
