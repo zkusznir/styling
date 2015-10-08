@@ -4,14 +4,13 @@
     <title>Stylish app</title>
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <script>
-      function overlay() {
-        el = document.getElementsByClassName("overlay")[0];
-        el.style.visibility = (el.style.visibility == "visible") ? "hidden" : "visible";
+      function togglePopup() {
+        document.querySelector('.popup').classList.toggle('popup--hidden');
+        document.querySelector('.page').classList.toggle('page--faded');
       }
   </script>
   </head>
   <body>
-    <a href='#' onclick='overlay()'>Click here to show the overlay</a>
     <div class='page'>
       <div class='page-header'>
         <div class='page-header__title'>Fresh News</div>
@@ -28,7 +27,7 @@
       <div class='options-buttons'>
         <div class='button--gray'>Popular</div>
         <div class='button--gray'>Recent</div>
-        <div class='button--gray'>Submit a story</div>
+        <div class='button--gray' onclick='togglePopup()'>Submit a story</div>
       </div>
       <div class='story'>
         <div class='counter'>12</div>
@@ -74,12 +73,19 @@
         </div>
       </div>
     </div>
-
-    <div class="overlay">
-     <div>
-        <p>Content you want the user to see goes here.</p>
-        Click here to [<a href='#' onclick='overlay()'>close</a>]
-     </div>
+    <div class='popup popup--hidden'>
+      <div class='page-header'>
+        <div class='page-header__title'>Submit a story</div>
+      </div>
+      <div class='story story--popup'>
+        <p class='story--popup__input-label'>Title</p>
+        <input class='story--popup__input' type='text'>
+      </div>
+      <div class='story story--popup'>
+        <p class='story--popup__input-label'>URL</p>
+        <input class='story--popup__input' type='text'>
+      </div>
+      <button class='popup__button-submit' onclick='togglePopup()'>Submit</button>
     </div>
   </body>
 </html>
