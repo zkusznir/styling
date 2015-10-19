@@ -35,10 +35,6 @@
   position: relative;
 }
 
-.page--faded {
-  opacity: 0.1;
-}
-
 .page-header {
   @include container(100px, auto, $header-background);
   align-items: center;
@@ -132,18 +128,25 @@
   font-size: 0px;
 }
 
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay--faded {
+  background-color: rgba(255,255,255,0.3);
+}
+
 .popup {
   width: 600px;
   background-color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -300px;
-  margin-left: -300px;
   font-family: sans-serif;
+  box-shadow: 1px 1px 30px $light-gray;
 }
 
 .story--popup {
+  margin: 20px 20px 0px 20px;
   align-items: center;
   vertical-align: center;
 }
@@ -157,9 +160,7 @@
 }
 
 .popup__button-submit {
-  margin: auto;
-  margin-left: 130px;
-  margin-top: 20px;
+  margin: 20px 155px;
 }
 
 .popup--hidden {

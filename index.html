@@ -6,7 +6,7 @@
     <script>
       function togglePopup() {
         document.querySelector('.popup').classList.toggle('popup--hidden');
-        document.querySelector('.page').classList.toggle('page--faded');
+        document.querySelector('.overlay').classList.toggle('overlay--faded');
       }
   </script>
   </head>
@@ -73,19 +73,21 @@
         </div>
       </div>
     </div>
-    <div class='popup popup--hidden'>
-      <div class='page-header'>
-        <div class='page-header__title'>Submit a story</div>
+    <div class='overlay'>
+      <div class='popup popup--hidden'>
+        <div class='page-header'>
+          <div class='page-header__title'>Submit a story</div>
+        </div>
+        <div class='story story--popup'>
+          <p class='story--popup__input-label'>Title</p>
+          <input class='story--popup__input' type='text'>
+        </div>
+        <div class='story story--popup'>
+          <p class='story--popup__input-label'>URL</p>
+          <input class='story--popup__input' type='text'>
+        </div>
+        <button class='popup__button-submit' onclick='togglePopup()'>Submit</button>
       </div>
-      <div class='story story--popup'>
-        <p class='story--popup__input-label'>Title</p>
-        <input class='story--popup__input' type='text'>
-      </div>
-      <div class='story story--popup'>
-        <p class='story--popup__input-label'>URL</p>
-        <input class='story--popup__input' type='text'>
-      </div>
-      <button class='popup__button-submit' onclick='togglePopup()'>Submit</button>
     </div>
   </body>
 </html>
